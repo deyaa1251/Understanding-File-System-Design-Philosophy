@@ -1,0 +1,483 @@
+
+╔════════════════════════════════════════════════════════════════════╗
+║                                                                    ║
+║          COMPREHENSIVE FILE SYSTEM DATA STRUCTURE BENCHMARK        ║
+║                    B-Tree vs Binary Search Tree                    ║
+║                                                                    ║
+╚════════════════════════════════════════════════════════════════════╝
+
+╔══════════════════════════════════════════════════════════════════╗
+║  Benchmark: 1000 elements - Sequential Insert (Best Case for BST)  ║
+╚══════════════════════════════════════════════════════════════════╝
+
+
+🌳 B-Tree (degree=100)
+------------------------
+  Insert time:      46         μs
+  Search time:      137        μs
+  Range query:      10         μs (100 keys)
+  Tree height:      2          levels
+
+🌲 Binary Search Tree
+-----------------------
+  Insert time:      14932      μs
+  Search time:      3993       μs
+  Range query:      36         μs (100 keys)
+  Tree height:      1000       levels
+
+📊 Performance Comparison
+---------------------------
+  Insert:  B-tree is 324.61x faster ⚡ than BST
+  Search:  B-tree is 29.15x faster ⚡ than BST
+  Height:  B-tree is 500.00x flatter 📏 than BST
+
+💾 Simulated Disk I/O (10ms per operation)
+--------------------------------------------
+  B-tree avg search:  20 ms (2 disk reads)
+  BST avg search:     10000 ms (1000 disk reads)
+  Speedup on disk:    500.0x faster ⚡⚡⚡
+
+╔══════════════════════════════════════════════════════════════════╗
+║  Benchmark: 1000 elements - Random Insert (Typical Case)         ║
+╚══════════════════════════════════════════════════════════════════╝
+
+
+🌳 B-Tree (degree=100)
+------------------------
+  Insert time:      219        μs
+  Search time:      136        μs
+  Range query:      44         μs (100 keys)
+  Tree height:      2          levels
+
+🌲 Binary Search Tree
+-----------------------
+  Insert time:      305        μs
+  Search time:      102        μs
+  Range query:      7          μs (100 keys)
+  Tree height:      20         levels
+
+📊 Performance Comparison
+---------------------------
+  Insert:  B-tree is 1.39x faster ⚡ than BST
+  Search:  B-tree is 0.75x slower than BST
+  Height:  B-tree is 10.00x flatter 📏 than BST
+
+💾 Simulated Disk I/O (10ms per operation)
+--------------------------------------------
+  B-tree avg search:  20 ms (2 disk reads)
+  BST avg search:     200 ms (20 disk reads)
+  Speedup on disk:    10.0x faster ⚡⚡⚡
+
+╔══════════════════════════════════════════════════════════════════╗
+║  Benchmark: 1000 elements - Reverse Insert (Worst Case for BST)  ║
+╚══════════════════════════════════════════════════════════════════╝
+
+
+🌳 B-Tree (degree=100)
+------------------------
+  Insert time:      280        μs
+  Search time:      101        μs
+  Range query:      10         μs (100 keys)
+  Tree height:      2          levels
+
+🌲 Binary Search Tree
+-----------------------
+  Insert time:      14445      μs
+  Search time:      3219       μs
+  Range query:      34         μs (100 keys)
+  Tree height:      1000       levels
+
+📊 Performance Comparison
+---------------------------
+  Insert:  B-tree is 51.59x faster ⚡ than BST
+  Search:  B-tree is 31.87x faster ⚡ than BST
+  Height:  B-tree is 500.00x flatter 📏 than BST
+
+💾 Simulated Disk I/O (10ms per operation)
+--------------------------------------------
+  B-tree avg search:  20 ms (2 disk reads)
+  BST avg search:     10000 ms (1000 disk reads)
+  Speedup on disk:    500.0x faster ⚡⚡⚡
+
+╔══════════════════════════════════════════════════════════════════╗
+║  Benchmark: 1000 elements - Duplicate-Heavy (90% duplicates)     ║
+╚══════════════════════════════════════════════════════════════════╝
+
+
+🌳 B-Tree (degree=100)
+------------------------
+  Insert time:      136        μs
+  Search time:      117        μs
+  Range query:      12         μs (100 keys)
+  Tree height:      2          levels
+
+🌲 Binary Search Tree
+-----------------------
+  Insert time:      115        μs
+  Search time:      60         μs
+  Range query:      5          μs (100 keys)
+  Tree height:      12         levels
+
+📊 Performance Comparison
+---------------------------
+  Insert:  B-tree is 0.85x slower than BST
+  Search:  B-tree is 0.51x slower than BST
+  Height:  B-tree is 6.00x flatter 📏 than BST
+
+💾 Simulated Disk I/O (10ms per operation)
+--------------------------------------------
+  B-tree avg search:  20 ms (2 disk reads)
+  BST avg search:     120 ms (12 disk reads)
+  Speedup on disk:    6.0x faster ⚡⚡⚡
+
+╔══════════════════════════════════════════════════════════════════╗
+║  Benchmark: 1000 elements - Skewed Distribution (90-10 rule)     ║
+╚══════════════════════════════════════════════════════════════════╝
+
+
+🌳 B-Tree (degree=100)
+------------------------
+  Insert time:      135        μs
+  Search time:      120        μs
+  Range query:      24         μs (100 keys)
+  Tree height:      2          levels
+
+🌲 Binary Search Tree
+-----------------------
+  Insert time:      136        μs
+  Search time:      74         μs
+  Range query:      6          μs (100 keys)
+  Tree height:      15         levels
+
+📊 Performance Comparison
+---------------------------
+  Insert:  B-tree is 1.01x faster ⚡ than BST
+  Search:  B-tree is 0.62x slower than BST
+  Height:  B-tree is 7.50x flatter 📏 than BST
+
+💾 Simulated Disk I/O (10ms per operation)
+--------------------------------------------
+  B-tree avg search:  20 ms (2 disk reads)
+  BST avg search:     150 ms (15 disk reads)
+  Speedup on disk:    7.5x faster ⚡⚡⚡
+
+╔══════════════════════════════════════════════════════════════════╗
+║  Benchmark: 10000 elements - Sequential Insert (Best Case for BST)  ║
+╚══════════════════════════════════════════════════════════════════╝
+
+
+🌳 B-Tree (degree=100)
+------------------------
+  Insert time:      285        μs
+  Search time:      1984       μs
+  Range query:      10         μs (100 keys)
+  Tree height:      2          levels
+
+🌲 Binary Search Tree
+-----------------------
+  Insert time:      570324     μs
+  Search time:      135057     μs
+  Range query:      14         μs (100 keys)
+  Tree height:      10000      levels
+
+📊 Performance Comparison
+---------------------------
+  Insert:  B-tree is 2001.14x faster ⚡ than BST
+  Search:  B-tree is 68.07x faster ⚡ than BST
+  Height:  B-tree is 5000.00x flatter 📏 than BST
+
+💾 Simulated Disk I/O (10ms per operation)
+--------------------------------------------
+  B-tree avg search:  20 ms (2 disk reads)
+  BST avg search:     100000 ms (10000 disk reads)
+  Speedup on disk:    5000.0x faster ⚡⚡⚡
+
+╔══════════════════════════════════════════════════════════════════╗
+║  Benchmark: 10000 elements - Random Insert (Typical Case)        ║
+╚══════════════════════════════════════════════════════════════════╝
+
+
+🌳 B-Tree (degree=100)
+------------------------
+  Insert time:      999        μs
+  Search time:      1841       μs
+  Range query:      14         μs (100 keys)
+  Tree height:      2          levels
+
+🌲 Binary Search Tree
+-----------------------
+  Insert time:      2478       μs
+  Search time:      1542       μs
+  Range query:      5          μs (100 keys)
+  Tree height:      29         levels
+
+📊 Performance Comparison
+---------------------------
+  Insert:  B-tree is 2.48x faster ⚡ than BST
+  Search:  B-tree is 0.84x slower than BST
+  Height:  B-tree is 14.50x flatter 📏 than BST
+
+💾 Simulated Disk I/O (10ms per operation)
+--------------------------------------------
+  B-tree avg search:  20 ms (2 disk reads)
+  BST avg search:     290 ms (29 disk reads)
+  Speedup on disk:    14.5x faster ⚡⚡⚡
+
+╔══════════════════════════════════════════════════════════════════╗
+║  Benchmark: 10000 elements - Reverse Insert (Worst Case for BST)  ║
+╚══════════════════════════════════════════════════════════════════╝
+
+
+🌳 B-Tree (degree=100)
+------------------------
+  Insert time:      2657       μs
+  Search time:      991        μs
+  Range query:      11         μs (100 keys)
+  Tree height:      2          levels
+
+🌲 Binary Search Tree
+-----------------------
+  Insert time:      594162     μs
+  Search time:      136346     μs
+  Range query:      14         μs (100 keys)
+  Tree height:      10000      levels
+
+📊 Performance Comparison
+---------------------------
+  Insert:  B-tree is 223.62x faster ⚡ than BST
+  Search:  B-tree is 137.58x faster ⚡ than BST
+  Height:  B-tree is 5000.00x flatter 📏 than BST
+
+💾 Simulated Disk I/O (10ms per operation)
+--------------------------------------------
+  B-tree avg search:  20 ms (2 disk reads)
+  BST avg search:     100000 ms (10000 disk reads)
+  Speedup on disk:    5000.0x faster ⚡⚡⚡
+
+╔══════════════════════════════════════════════════════════════════╗
+║  Benchmark: 10000 elements - Duplicate-Heavy (90% duplicates)    ║
+╚══════════════════════════════════════════════════════════════════╝
+
+
+🌳 B-Tree (degree=100)
+------------------------
+  Insert time:      1479       μs
+  Search time:      1517       μs
+  Range query:      13         μs (100 keys)
+  Tree height:      2          levels
+
+🌲 Binary Search Tree
+-----------------------
+  Insert time:      1220       μs
+  Search time:      512        μs
+  Range query:      2          μs (100 keys)
+  Tree height:      21         levels
+
+📊 Performance Comparison
+---------------------------
+  Insert:  B-tree is 0.82x slower than BST
+  Search:  B-tree is 0.34x slower than BST
+  Height:  B-tree is 10.50x flatter 📏 than BST
+
+💾 Simulated Disk I/O (10ms per operation)
+--------------------------------------------
+  B-tree avg search:  20 ms (2 disk reads)
+  BST avg search:     210 ms (21 disk reads)
+  Speedup on disk:    10.5x faster ⚡⚡⚡
+
+╔══════════════════════════════════════════════════════════════════╗
+║  Benchmark: 10000 elements - Skewed Distribution (90-10 rule)    ║
+╚══════════════════════════════════════════════════════════════════╝
+
+
+🌳 B-Tree (degree=100)
+------------------------
+  Insert time:      1274       μs
+  Search time:      1140       μs
+  Range query:      12         μs (100 keys)
+  Tree height:      2          levels
+
+🌲 Binary Search Tree
+-----------------------
+  Insert time:      1030       μs
+  Search time:      559        μs
+  Range query:      3          μs (100 keys)
+  Tree height:      24         levels
+
+📊 Performance Comparison
+---------------------------
+  Insert:  B-tree is 0.81x slower than BST
+  Search:  B-tree is 0.49x slower than BST
+  Height:  B-tree is 12.00x flatter 📏 than BST
+
+💾 Simulated Disk I/O (10ms per operation)
+--------------------------------------------
+  B-tree avg search:  20 ms (2 disk reads)
+  BST avg search:     240 ms (24 disk reads)
+  Speedup on disk:    12.0x faster ⚡⚡⚡
+
+╔══════════════════════════════════════════════════════════════════╗
+║  Benchmark: 100000 elements - Sequential Insert (Best Case for BST)  ║
+╚══════════════════════════════════════════════════════════════════╝
+
+
+🌳 B-Tree (degree=100)
+------------------------
+  Insert time:      2579       μs
+  Search time:      12938      μs
+  Range query:      7          μs (100 keys)
+  Tree height:      3          levels
+
+🌲 Binary Search Tree
+-----------------------
+  Insert time:      60145663   μs
+  Search time:      14192671   μs
+  Range query:      15         μs (100 keys)
+  Tree height:      100000     levels
+
+📊 Performance Comparison
+---------------------------
+  Insert:  B-tree is 23321.31x faster ⚡ than BST
+  Search:  B-tree is 1096.98x faster ⚡ than BST
+  Height:  B-tree is 33333.33x flatter 📏 than BST
+
+💾 Simulated Disk I/O (10ms per operation)
+--------------------------------------------
+  B-tree avg search:  30 ms (3 disk reads)
+  BST avg search:     1000000 ms (100000 disk reads)
+  Speedup on disk:    33333.3x faster ⚡⚡⚡
+
+╔══════════════════════════════════════════════════════════════════╗
+║  Benchmark: 100000 elements - Random Insert (Typical Case)       ║
+╚══════════════════════════════════════════════════════════════════╝
+
+
+🌳 B-Tree (degree=100)
+------------------------
+  Insert time:      19623      μs
+  Search time:      14026      μs
+  Range query:      11         μs (100 keys)
+  Tree height:      3          levels
+
+🌲 Binary Search Tree
+-----------------------
+  Insert time:      49918      μs
+  Search time:      20879      μs
+  Range query:      3          μs (100 keys)
+  Tree height:      38         levels
+
+📊 Performance Comparison
+---------------------------
+  Insert:  B-tree is 2.54x faster ⚡ than BST
+  Search:  B-tree is 1.49x faster ⚡ than BST
+  Height:  B-tree is 12.67x flatter 📏 than BST
+
+💾 Simulated Disk I/O (10ms per operation)
+--------------------------------------------
+  B-tree avg search:  30 ms (3 disk reads)
+  BST avg search:     380 ms (38 disk reads)
+  Speedup on disk:    12.7x faster ⚡⚡⚡
+
+╔══════════════════════════════════════════════════════════════════╗
+║  Benchmark: 100000 elements - Reverse Insert (Worst Case for BST)  ║
+╚══════════════════════════════════════════════════════════════════╝
+
+
+🌳 B-Tree (degree=100)
+------------------------
+  Insert time:      22999      μs
+  Search time:      8002       μs
+  Range query:      9          μs (100 keys)
+  Tree height:      3          levels
+
+🌲 Binary Search Tree
+-----------------------
+  Insert time:      60931216   μs
+  Search time:      13783920   μs
+  Range query:      14         μs (100 keys)
+  Tree height:      100000     levels
+
+📊 Performance Comparison
+---------------------------
+  Insert:  B-tree is 2649.30x faster ⚡ than BST
+  Search:  B-tree is 1722.56x faster ⚡ than BST
+  Height:  B-tree is 33333.33x flatter 📏 than BST
+
+💾 Simulated Disk I/O (10ms per operation)
+--------------------------------------------
+  B-tree avg search:  30 ms (3 disk reads)
+  BST avg search:     1000000 ms (100000 disk reads)
+  Speedup on disk:    33333.3x faster ⚡⚡⚡
+
+╔══════════════════════════════════════════════════════════════════╗
+║  Benchmark: 100000 elements - Duplicate-Heavy (90% duplicates)   ║
+╚══════════════════════════════════════════════════════════════════╝
+
+
+🌳 B-Tree (degree=100)
+------------------------
+  Insert time:      16749      μs
+  Search time:      15173      μs
+  Range query:      10         μs (100 keys)
+  Tree height:      3          levels
+
+🌲 Binary Search Tree
+-----------------------
+  Insert time:      20616      μs
+  Search time:      6861       μs
+  Range query:      3          μs (100 keys)
+  Tree height:      30         levels
+
+📊 Performance Comparison
+---------------------------
+  Insert:  B-tree is 1.23x faster ⚡ than BST
+  Search:  B-tree is 0.45x slower than BST
+  Height:  B-tree is 10.00x flatter 📏 than BST
+
+💾 Simulated Disk I/O (10ms per operation)
+--------------------------------------------
+  B-tree avg search:  30 ms (3 disk reads)
+  BST avg search:     300 ms (30 disk reads)
+  Speedup on disk:    10.0x faster ⚡⚡⚡
+
+╔══════════════════════════════════════════════════════════════════╗
+║  Benchmark: 100000 elements - Skewed Distribution (90-10 rule)   ║
+╚══════════════════════════════════════════════════════════════════╝
+
+
+🌳 B-Tree (degree=100)
+------------------------
+  Insert time:      12692      μs
+  Search time:      5791       μs
+  Range query:      6          μs (100 keys)
+  Tree height:      3          levels
+
+🌲 Binary Search Tree
+-----------------------
+  Insert time:      10492      μs
+  Search time:      5111       μs
+  Range query:      2          μs (100 keys)
+  Tree height:      31         levels
+
+📊 Performance Comparison
+---------------------------
+  Insert:  B-tree is 0.83x slower than BST
+  Search:  B-tree is 0.88x slower than BST
+  Height:  B-tree is 10.33x flatter 📏 than BST
+
+💾 Simulated Disk I/O (10ms per operation)
+--------------------------------------------
+  B-tree avg search:  30 ms (3 disk reads)
+  BST avg search:     310 ms (31 disk reads)
+  Speedup on disk:    10.3x faster ⚡⚡⚡
+
+╔══════════════════════════════════════════════════════════════════╗
+║  Key Takeaways for File Systems                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+
+  1. B-trees maintain much lower height than BSTs
+  2. On disk, height = # of disk reads (each ~10ms)
+  3. B-trees can be 10-20x faster for disk-based operations
+  4. BSTs may be faster in RAM, but file systems use disk
+  5. B-trees pack multiple keys per node = fewer disk blocks
+
